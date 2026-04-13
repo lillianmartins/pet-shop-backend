@@ -1,3 +1,5 @@
+import FilhoteDB from "../database/FilhoteDB.js";
+
 export default class Filhote {
     #id;
     #especie;
@@ -28,5 +30,40 @@ export default class Filhote {
     }
     set raca(raca) {
         this.#raca = raca;
+    }
+
+    toString() {
+    return `
+        Especie: ${this.#especie}
+        Raça: ${this.#raca}
+    `;
+  }
+
+    async cadastrar() {
+      const filhote = new FilhoteDB();
+      await filhote.cadastrar(this);
+    }
+  
+    async consultar(id) {
+      const filhote = new FilhoteDB();
+      return await filhote.consultar(id);
+    }
+  
+    async atualizar() {
+      const filhote = new FilhoteDB();
+      await filhote.atualizar(this);
+    }
+  
+    async excluir() {
+      const filhote = new FilhoteDB();
+      await filhote.excluir(this);
+    }
+
+    toJSON() {
+      return {
+        id: this.#id,
+        especie: this.#especie,
+        raca: this.#raca,
+      };
     }
 }

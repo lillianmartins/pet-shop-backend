@@ -1,0 +1,27 @@
+{
+  "name": "pet-shop",
+  "version": "1.0.0",
+  "description": "Plataforma que permite o cadastro de interessados em filhotes, funcionando como uma fila de espera para adoção ou aquisição. O sistema também permite o cadastro e gerenciamento de filhotes disponíveis.",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lillianmartins/pet-shop.git"
+  },
+  "author": "Lillian Martins Cruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lillianmartins/pet-shop/issues"
+  },
+  "homepage": "https://github.com/lillianmartins/pet-shop#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.0"
+  }
+}

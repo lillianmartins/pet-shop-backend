@@ -21,7 +21,7 @@ export default class InteressadoDB {
   }
 
   async listarInteressados() {
-    const sql = "SELECT * FROM interessados";
+    const sql = "SELECT * FROM interessados ORDER BY nome ASC";
     const conexao = await obterConexao();
     const resultado = await conexao.execute(sql);
     conexao.release();
